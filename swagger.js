@@ -19,8 +19,12 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: "http://localhost:3000",
-      description: "Development server",
+      url: "http://localhost:3000/api/v1",
+      description: "Development server (v1)",
+    },
+    {
+      url: "http://localhost:3000/api/v2",
+      description: "Development server (v2)",
     },
   ],
 };
@@ -30,7 +34,7 @@ const options = {
   /**
    * The apis property specifies the paths to the API endpoints with Swagger annotations.
    */
-  apis: ["./*.js"],
+  apis: ["./controllers/*.js"],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
